@@ -3,7 +3,7 @@ import Input from "../utils/Input";
 
 class ExperienceInstance extends Component {
     render() {
-        return (<div>
+        return (<div id={this.props.id}>
             <Input type="text" name="from" placeholder="From" />
             <Input type="text" name="to" placeholder="To" />
             <Input type="text" name="position" placeholder="Position" />
