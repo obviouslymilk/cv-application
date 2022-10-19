@@ -4,7 +4,7 @@ import ExperienceInstance from "./ExperienceInstance";
 
 class Experience extends Component {
     render() {
-        const children = this.props.experience.map(item => {
+        const children = this.props.data.map(item => {
             return <ExperienceInstance key={item.id} id={item.id} />
         })
 
