@@ -1,8 +1,10 @@
-import { Component } from "react";
+import React, { Component } from "react";
+import Main from "./components/Main";
+import cv from './modules/cv-example';
 
 class App extends Component {
   render() {
-    return (<div></div>);
+    return (<Main cv={cv} />);
   }
 }
 
