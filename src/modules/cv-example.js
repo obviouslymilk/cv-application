@@ -28,13 +28,6 @@ const cv = {
             title: "University of Studying",
             location: "London"
         }
-    ],
-    skills: [
-        {
-            id: uuidv4(),
-            title: "JavaScript",
-            desc: "8 years of JavaScript experience"
-        }
     ]
 }
 

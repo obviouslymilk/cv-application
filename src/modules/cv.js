@@ -28,13 +28,6 @@ const cv = {
             title: "",
             location: ""
         }
-    ],
-    skills: [
-        {
-            id: uuidv4(),
-            title: "",
-            desc: ""
-        }
     ]
 }
 
