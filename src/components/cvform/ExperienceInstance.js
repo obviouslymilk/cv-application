@@ -3,6 +3,7 @@ import Input from "../utils/Input";
 
 class ExperienceInstance extends Component {
     render() {
+        const { from, to, position, company, location } = this.props.data;
         return (<div id={this.props.id}>
             <Input type="text" name="from" placeholder="From" />
             <Input type="text" name="to" placeholder="To" />
