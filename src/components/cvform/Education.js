@@ -5,7 +5,7 @@ import EducationInstance from "./EducationInstance";
 class Education extends Component {
     render() {
         const children = this.props.data.map(item => {
-            return <EducationInstance key={item.id} id={item.id} />
+            return <EducationInstance key={item.id} id={item.id} data={item} onChange={this.props.onChange} />
         })
 
         return (<Section title="Education">

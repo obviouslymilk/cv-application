@@ -6,9 +6,9 @@ import Education from "./Education";
 class CVForm extends Component {
     render() {
         return (<div className="CVForm">  
-            <PersonalInfo info={this.props.cv.personal} />
+            <PersonalInfo info={this.props.cv.personal} onChange={this.props.handlePersonalChange} />
             <Experience data={this.props.cv.experience} />
-            <Education data={this.props.cv.education} />
+            <Education data={this.props.cv.education} onChange={this.props.handleEducationChange} />
         </div>);
     }
 }
