@@ -8,7 +8,7 @@ class CVForm extends Component {
         return (<div className="CVForm">  
             <PersonalInfo info={this.props.cv.personal} onChange={this.props.handlePersonalChange} />
             <Experience data={this.props.cv.experience} />
-            <Education data={this.props.cv.education} onChange={this.props.handleEducationChange} />
+            <Education data={this.props.cv.education} onChange={this.props.handleEducationChange} onAdd={this.props.handleEducationAdd} onDelete={this.props.handleEducationDelete} />
         </div>);
     }
 }

@@ -8,7 +8,10 @@ class Main extends Component {
             <CVForm
                 cv={this.props.cv}
                 handlePersonalChange={this.props.handlePersonalChange}
-                handleEducationChange={this.props.handleEducationChange} />
+                handleEducationChange={this.props.handleEducationChange}
+                handleEducationAdd={this.props.handleEducationAdd}
+                handleEducationDelete={this.props.handleEducationDelete}
+                />
             <CVPreview cv={this.props.cv}  />
         </div>);
     }
