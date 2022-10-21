@@ -5,12 +5,12 @@ import ExperienceInstance from "./ExperienceInstance";
 class Experience extends Component {
     render() {
         const children = this.props.data.map(item => {
-            return <ExperienceInstance key={item.id} id={item.id} data={item} />
+            return <ExperienceInstance key={item.id} id={item.id} data={item} onChange={this.props.onChange} onDelete={this.props.onDelete} />
         })
 
         return (<Section title="Experience">
             {children}
-            <button>Add</button>
+            <button onClick={this.props.onAdd}>Add</button>
         </Section>);
     }
 }

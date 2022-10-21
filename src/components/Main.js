@@ -11,6 +11,10 @@ class Main extends Component {
                 handleEducationChange={this.props.handleEducationChange}
                 handleEducationAdd={this.props.handleEducationAdd}
                 handleEducationDelete={this.props.handleEducationDelete}
+
+                handleExperienceChange={this.props.handleExperienceChange}
+                handleExperienceAdd={this.props.handleExperienceAdd}
+                handleExperienceDelete={this.props.handleExperienceDelete}
                 />
             <CVPreview cv={this.props.cv}  />
         </div>);

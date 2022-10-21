@@ -61,7 +61,48 @@ class App extends Component {
       cv: newCV
     })
   }
+
+  handleExperienceChange = (e) => {
+    const { name, value } = e.target;
+    const exp = this.state.cv.experience;
+    const instanceId = e.target.parentElement.id;
+    const instanceIndex = exp.indexOf(exp.find(i => i.id === instanceId));
     
+    this.setState(prevState => {
+      let newCV = this.newCV(prevState);
+      newCV.experience[instanceIndex][name] = value;
+      return newCV;
+    })  
+  }
+    
+  handleExperienceAdd = () => {
+    let newCV = Object.assign({}, this.state.cv);
+    newCV.experience.push({
+      id: uuidv4(),
+      from: "",
+      to: "",
+      position: "",
+      company: "",
+      location: ""
+    })
+
+    this.setState({
+      cv: newCV
+    })
+  }
+
+  handleExperienceDelete = (e) => {
+    const instanceId = e.target.parentElement.id;
+    let newCV = Object.assign({}, this.state.cv);
+    newCV.experience = newCV.experience.filter(i => { 
+      return i.id !== instanceId
+    })
+
+    this.setState({
+      cv: newCV
+    })
+  }
+
 
   render() {
     return (<Main
@@ -70,6 +111,10 @@ class App extends Component {
       handleEducationChange={this.handleEducationChange}
       handleEducationAdd={this.handleEducationAdd}
       handleEducationDelete={this.handleEducationDelete}
+
+      handleExperienceChange={this.handleExperienceChange}
+      handleExperienceAdd={this.handleExperienceAdd}
+      handleExperienceDelete={this.handleExperienceDelete}
     />);
   }
 }
