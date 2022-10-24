@@ -4,7 +4,7 @@ import CVPreview from "./cvpreview/CVPreview";
 
 class Main extends Component {
     render() {
-        return (<div>
+        return (<main>
             <CVForm
                 cv={this.props.cv}
                 handlePersonalChange={this.props.handlePersonalChange}
@@ -17,7 +17,7 @@ class Main extends Component {
                 handleExperienceDelete={this.props.handleExperienceDelete}
                 />
             <CVPreview cv={this.props.cv}  />
-        </div>);
+        </main>);
     }
 }
 
