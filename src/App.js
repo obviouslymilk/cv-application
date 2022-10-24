@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Main from "./components/Main";
 import { v4 as uuidv4 } from 'uuid';
 import cv from './modules/cv-example';
+import './styles/App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
@@ -105,7 +108,9 @@ class App extends Component {
 
 
   render() {
-    return (<Main
+    return (<>
+      <Header />
+      <Main
       cv={this.state.cv}
       handlePersonalChange={this.handlePersonalChange}    
       handleEducationChange={this.handleEducationChange}
@@ -115,7 +120,9 @@ class App extends Component {
       handleExperienceChange={this.handleExperienceChange}
       handleExperienceAdd={this.handleExperienceAdd}
       handleExperienceDelete={this.handleExperienceDelete}
-    />);
+      />
+      <Footer />
+    </>);
   }
 }
 
