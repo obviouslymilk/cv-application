@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Experience from "./Experience";
 import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
+import '../../styles/CVForm.css'
 
 class CVForm extends Component {
     render() {
