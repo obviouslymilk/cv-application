@@ -8,7 +8,7 @@ class Experience extends Component {
             return <ExperienceInstance key={item.id} id={item.id} data={item} />
         })
 
-        return (<Section title="Experience">
+        return (<Section title="Experience" id="experience">
             {children}
         </Section>);
     }

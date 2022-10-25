@@ -1,0 +1,42 @@
+#CVForm * {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+#CVForm {
+    margin: 1%;
+    padding: 1%;   
+    background-color: #f3f4f6;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+section, .instance {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input {
+    height: 2rem;
+
+    padding: 1vmin 1.5vmin;
+    border: 1px solid gray;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+button {
+    height: 3rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #374151;
+    border-radius: 6px;
+    color: white;
+}
+
+.add {
+    background-color: #1f2937;
+}

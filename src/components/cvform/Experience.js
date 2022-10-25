@@ -10,7 +10,7 @@ class Experience extends Component {
 
         return (<Section title="Experience">
             {children}
-            <button onClick={this.props.onAdd}>Add</button>
+            <button onClick={this.props.onAdd} className="add">Add</button>
         </Section>);
     }
 }

@@ -4,12 +4,12 @@ class PersonalInfo extends Component {
     render() {
         const personal = this.props.personal;
 
-        return (<section>
+        return (<section className="personal">
             <h1>{personal.firstName} {personal.lastName}</h1>
             <h2>{personal.title}</h2>
-            <strong>Adress</strong> {personal.adress}
-            <strong>Phone</strong> {personal.phone}
-            <strong>E-mail</strong> {personal.email}
+            <div><strong>Adress</strong> {personal.adress}</div>
+            <div><strong>Phone</strong> {personal.phone}</div>
+            <div><strong>E-mail</strong> {personal.email}</div>
             <p>{personal.desc}</p>
         </section>);
     }
