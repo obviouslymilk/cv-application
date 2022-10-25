@@ -1,5 +1,5 @@
 
-[:us: *Description*](https://github.com/obviouslymilk/cv-application/blob/main/README.md)        [:ru: *Описание*](https://github.com/obviouslymilk/cv-application/blob/main/README.RU.md)
+[:us: *Description*](https://github.com/obviouslymilk/cv-application/blob/main/README.md)        [:ru: *Описание*](https://github.com/obviouslymilk/cv-application/blob/master/README.RU.md)
 
 CV Editor Application made to practice basic <img src="https://brandslogos.com/wp-content/uploads/images/large/react-logo.png" data-canonical-src="https://brandslogos.com/wp-content/uploads/images/large/react-logo.png" width="18" height="16"/>[React](https://jestjs.io/) skills and understanding.
 
