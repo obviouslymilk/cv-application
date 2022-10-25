@@ -17,6 +17,10 @@ header {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    align-items: center;
     background-color: lightgray;
     margin-top: auto;
     min-height: 64px;

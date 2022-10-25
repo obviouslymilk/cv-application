@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Footer extends Component {
     render() {
         return (<footer>
-            github link
+            <a href="https://github.com/obviouslymilk/cv-application">GitHub</a>
         </footer>);
     }
 }
