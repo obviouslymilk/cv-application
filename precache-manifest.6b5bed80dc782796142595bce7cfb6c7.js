@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a983aa665dae6e91b7cd",
-    "url": "/cv-application/static/css/main.726a4279.chunk.css"
+    "revision": "285628aae6758d4d9e95",
+    "url": "/cv-application/static/css/main.b5357cc7.chunk.css"
   },
   {
-    "revision": "a983aa665dae6e91b7cd",
-    "url": "/cv-application/static/js/main.a983aa66.chunk.js"
+    "revision": "285628aae6758d4d9e95",
+    "url": "/cv-application/static/js/main.285628aa.chunk.js"
   },
   {
     "revision": "388838b6a218469360d3",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/cv-application/static/js/runtime~main.65881043.js"
   },
   {
-    "revision": "a0b9c8dd5bbe0171a3d0927785a97a45",
+    "revision": "06643545df652a51ff494b892fb28603",
     "url": "/cv-application/index.html"
   }
 ];
