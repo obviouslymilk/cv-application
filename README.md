@@ -5,5 +5,13 @@ CV Editor Application made to practice basic <img src="https://brandslogos.com/w
 
 ![image](https://user-images.githubusercontent.com/68001894/197665509-aa09d762-34fd-4a0f-9584-b044016414b3.png)
 
+## Getting Started
+```
+git clone https://github.com/obviouslymilk/cv-application.git
+cd cv-application
+npm install
+npm start
+```
+
 
 *Created as a part of <img src="https://github.com/TheOdinProject/theodinproject/blob/main/app/assets/images/icons/odin-icon.svg" data-canonical-src="https://github.com/TheOdinProject/theodinproject/blob/main/app/assets/images/icons/odin-icon.svg" width="18" height="18"/>[The Odin Project](https://www.theodinproject.com/dashboard) curriculum.*
