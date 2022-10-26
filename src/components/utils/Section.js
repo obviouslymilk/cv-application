@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 function Section(props) {
         const { title, children} = props;
