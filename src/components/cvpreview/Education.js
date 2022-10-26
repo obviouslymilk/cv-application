@@ -1,17 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import Section from "../utils/Section";
 import EducationInstance from "./EducationInstance.js";
 
-class Education extends Component {
-    render() {
-        const children = this.props.data.map(item => {
-            return <EducationInstance key={item.id} id={item.id} data={item} />
-        })
+function Education(props) {
+    const children = props.data.map(item => {
+        return <EducationInstance key={item.id} id={item.id} data={item} />
+    })
 
-        return (<Section title="Education">
-            {children}
-        </Section>);
-    }
+    return <Section title="Education">
+        {children}
+    </Section>;    
 }
 
 export default Education;
