@@ -4,14 +4,12 @@ import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
 import '../../styles/CVForm.css'
 
-class CVForm extends Component {
-    render() {
-        return (<div id="CVForm">  
-            <PersonalInfo info={this.props.cv.personal} onChange={this.props.handlePersonalChange} />
-            <Experience data={this.props.cv.experience} onChange={this.props.handleExperienceChange} onAdd={this.props.handleExperienceAdd} onDelete={this.props.handleExperienceDelete} />
-            <Education data={this.props.cv.education} onChange={this.props.handleEducationChange} onAdd={this.props.handleEducationAdd} onDelete={this.props.handleEducationDelete} />
-        </div>);
-    }
+function CVForm(props) {
+    return (<div id="CVForm">
+        <PersonalInfo info={props.cv.personal} onChange={props.handlePersonalChange} />
+        <Experience data={props.cv.experience} onChange={props.handleExperienceChange} onAdd={props.handleExperienceAdd} onDelete={props.handleExperienceDelete} />
+        <Education data={props.cv.education} onChange={props.handleEducationChange} onAdd={props.handleEducationAdd} onDelete={props.handleEducationDelete} />
+    </div>);    
 }
 
 export default CVForm;
