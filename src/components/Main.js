@@ -5,7 +5,9 @@ import CVPreview from "./cvpreview/CVPreview";
 function Main(props) {
     return <main>
         <CVForm
-            cv={props.cv}
+            personal={props.personal}
+            experience={props.experience}
+            education={props.education}
             handlePersonalChange={props.handlePersonalChange}
             handleEducationChange={props.handleEducationChange}
             handleEducationAdd={props.handleEducationAdd}
@@ -15,7 +17,11 @@ function Main(props) {
             handleExperienceAdd={props.handleExperienceAdd}
             handleExperienceDelete={props.handleExperienceDelete}
             />
-        <CVPreview cv={props.cv}  />
+        <CVPreview
+            personal={props.personal}
+            experience={props.experience}
+            education={props.education}
+        />
     </main>;
 }
 

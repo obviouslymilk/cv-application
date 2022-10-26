@@ -6,9 +6,9 @@ import '../../styles/CVPreview.css'
 
 function CVPreview(props) {
     return <div id="CVPreview">
-        <PersonalInfo personal={props.cv.personal} />
-        <Experience data={props.cv.experience} />
-        <Education data={props.cv.education} />
+        <PersonalInfo personal={props.personal} />
+        <Experience data={props.experience} />
+        <Education data={props.education} />
     </div>;    
 }
 
