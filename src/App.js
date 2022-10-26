@@ -1,46 +1,44 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Main from "./components/Main";
 import { v4 as uuidv4 } from 'uuid';
-import cv from './modules/cv-example';
+import cvData from './modules/cv-example';
 import './styles/App.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-class App extends Component {
-  state = {
-    cv: cv
+function App() {
+  const [personal, setPersonal] = useState(cvData.personal);
+  const [experience, setExerience] = useState(cvData.experience);
+  const [education, setEducation] = useState(cvData.education);
+
+  function mergeState(object) {
+    return Object.assign({}, object);
   }
 
-  newCV(prevState) {
-    return Object.assign({}, prevState.cv);
+  function newArray(array) {
+    return Array.from(array);
   }
 
-
-  handlePersonalChange = (e) => {
+  const handlePersonalChange = (e) => {
     const { name, value } = e.target;
-    this.setState(prevState => {
-      let newCV = this.newCV(prevState)
-      newCV.personal[name] = value;
-      return newCV;
-    })
+    const newPersonal = mergeState(personal);
+    newPersonal[name] = value;
+    setPersonal(newPersonal);
   }
 
-  handleEducationChange = (e) => {
+  const handleEducationChange = (e) => {
     const { name, value } = e.target;
-    const education = this.state.cv.education;
     const instanceId = e.target.parentElement.id;
     const instanceIndex = education.indexOf(education.find(i => i.id === instanceId));
-    
-    this.setState(prevState => {
-      let newCV = this.newCV(prevState);
-      newCV.education[instanceIndex][name] = value;
-      return newCV;
-    })
+
+    const newEducation = newArray(education);
+    newEducation[instanceIndex][name] = value;
+    setEducation(newEducation);
   }
 
-  handleEducationAdd = () => {
-    let newCV = Object.assign({}, this.state.cv);
-    newCV.education.push({
+  const handleEducationAdd = () => {
+    const newEducation = newArray(education);
+    newEducation.push({
       id: uuidv4(),
       from: "",
       to: "",
@@ -48,39 +46,32 @@ class App extends Component {
       location: ""
     })
 
-    this.setState({
-      cv: newCV
-    })
+    setEducation(newEducation);
   }
 
-  handleEducationDelete = (e) => {
+  const handleEducationDelete = (e) => {
     const instanceId = e.target.parentElement.id;
-    let newCV = Object.assign({}, this.state.cv);
-    newCV.education = newCV.education.filter(i => { 
+    let newEducation = newArray(education);
+    newEducation = newEducation.filter(i => { 
       return i.id !== instanceId
     })
 
-    this.setState({
-      cv: newCV
-    })
+    setEducation(newEducation);
+  }
+  
+  const handleExperienceChange = (e) => {
+    const { name, value } = e.target;
+    const instanceId = e.target.parentElement.id;
+    const instanceIndex = experience.indexOf(experience.find(i => i.id === instanceId));
+
+    const newExperience = newArray(experience);
+    newExperience[instanceIndex][name] = value;
+    setExerience(newExperience);
   }
 
-  handleExperienceChange = (e) => {
-    const { name, value } = e.target;
-    const exp = this.state.cv.experience;
-    const instanceId = e.target.parentElement.id;
-    const instanceIndex = exp.indexOf(exp.find(i => i.id === instanceId));
-    
-    this.setState(prevState => {
-      let newCV = this.newCV(prevState);
-      newCV.experience[instanceIndex][name] = value;
-      return newCV;
-    })  
-  }
-    
-  handleExperienceAdd = () => {
-    let newCV = Object.assign({}, this.state.cv);
-    newCV.experience.push({
+  const handleExperienceAdd = () => {
+    const newExperience = newArray(experience);
+    newExperience.push({
       id: uuidv4(),
       from: "",
       to: "",
@@ -89,41 +80,38 @@ class App extends Component {
       location: ""
     })
 
-    this.setState({
-      cv: newCV
-    })
+    setExerience(newExperience);
   }
 
-  handleExperienceDelete = (e) => {
+  const handleExperienceDelete = (e) => {
     const instanceId = e.target.parentElement.id;
-    let newCV = Object.assign({}, this.state.cv);
-    newCV.experience = newCV.experience.filter(i => { 
+    let newExperience = newArray(experience);
+    newExperience = newExperience.filter(i => { 
       return i.id !== instanceId
     })
 
-    this.setState({
-      cv: newCV
-    })
+    setExerience(newExperience);
   }
 
 
-  render() {
-    return (<>
-      <Header />
-      <Main
-      cv={this.state.cv}
-      handlePersonalChange={this.handlePersonalChange}    
-      handleEducationChange={this.handleEducationChange}
-      handleEducationAdd={this.handleEducationAdd}
-      handleEducationDelete={this.handleEducationDelete}
+  return <>
+    <Header />
+    <Main
+      personal={personal}
+      experience={experience}
+      education={education}
+      handlePersonalChange={handlePersonalChange} 
+      
+      handleEducationChange={handleEducationChange}
+      handleEducationAdd={handleEducationAdd}
+      handleEducationDelete={handleEducationDelete}
 
-      handleExperienceChange={this.handleExperienceChange}
-      handleExperienceAdd={this.handleExperienceAdd}
-      handleExperienceDelete={this.handleExperienceDelete}
-      />
-      <Footer />
-    </>);
-  }
+      handleExperienceChange={handleExperienceChange}
+      handleExperienceAdd={handleExperienceAdd}
+      handleExperienceDelete={handleExperienceDelete}
+    />
+    <Footer />
+  </>
 }
 
 export default App;
